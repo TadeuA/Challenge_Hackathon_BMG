@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 
 import styles from "./styles";
@@ -6,17 +6,14 @@ import shild from "../../configs/shild";
 import avatar from "../../assets/avatar1.png";
 import { connect } from "react-redux";
 
-export function togglesSelectGroup(group) {
+export function togglesSelectGroup(gamers) {
   return {
     type: "TOGGLE_SELECT_GROUP",
-    group,
+    gamers,
   };
 }
 
 const Groups = ({ groups, groupActive, dispatch }) => {
-  useEffect(() => {
-    dispatch(togglesSelectGroup(groups[0].gamers));
-  }, []);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Grupos</Text>
@@ -40,21 +37,23 @@ const Groups = ({ groups, groupActive, dispatch }) => {
           )}
         />
       </View>
+
       <View style={styles.ranckContainer}>
         <Text style={styles.textPoints}>Points</Text>
 
         <FlatList
-          data={[1, 2, 3, 4, 5, 6]}
+          data={groupActive.gamers.gamers}
           style={{ height: "60%" }}
-          keyExtractor={({ subitem, index }) => toString(index)}
-          renderItem={({ subitem, index }) => (
+          keyExtractor={({ item, index }) => toString(index)}
+          ListEmptyComponent={<Text>Selecione um Grupo</Text>}
+          renderItem={({ item, index }) => (
             <View style={styles.gamersContainer}>
               <View style={styles.gamersContainerPeople}>
                 <Text style={styles.position}>{index + 1}</Text>
                 <View style={styles.peopleContainer}>
                   <Image styles={styles.avatar} source={avatar} />
                 </View>
-                <Text styles={styles.nickName}>Nickname</Text>
+                <Text styles={styles.nickName}></Text>
               </View>
               <Text style={styles.pointsGamers}>{600 / (index + 1)}</Text>
             </View>

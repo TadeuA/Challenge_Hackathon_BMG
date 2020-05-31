@@ -7,18 +7,18 @@ import trails from "../../configs/trails";
 
 export default function Sections() {
   return (
-    <View>
-      <Text>Cursos</Text>
-      <View>
+    <View style={styles.container}>
+      <Text style={styles.textCurses}>Cursos</Text>
+      <View style={styles.curses}>
         <View>
           <TouchableOpacity onPress={() => {}}>
-            <View>
+            <View style={styles.listCurses}>
               <Image source={trails("saver", 0)} style={[styles.imageSize]} />
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => {}}>
-            <View>
+            <View style={styles.listCurses}>
               <Image
                 source={trails("investor", 0)}
                 style={[styles.imageSize]}
@@ -28,7 +28,7 @@ export default function Sections() {
         </View>
         <View>
           <TouchableOpacity onPress={() => {}}>
-            <View>
+            <View style={styles.listCurses}>
               <Image
                 source={trails("policyholder", 0)}
                 style={[styles.imageSize]}
@@ -37,7 +37,7 @@ export default function Sections() {
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => {}}>
-            <View>
+            <View style={styles.listCurses}>
               <Image
                 source={trails("policyholderNoOptios", 0)}
                 style={[styles.imageSize]}
