@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  activeGroup: {},
+  groupActive: [],
   groups: [
     {
       id: 1,
@@ -171,10 +171,9 @@ const INITIAL_STATE = {
     },
   ],
 };
-
 export default function groups(state = INITIAL_STATE, action) {
   if (action.type === "TOGGLE_SELECT_GROUP") {
-    return { ...state, activeGroup: action.group };
+    return { ...state, groupActive: action };
   }
 
   return state;

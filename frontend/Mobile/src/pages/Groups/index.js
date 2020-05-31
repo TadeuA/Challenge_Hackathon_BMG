@@ -6,14 +6,9 @@ import shild from "../../configs/shild";
 import avatar from "../../assets/avatar1.png";
 import { connect } from "react-redux";
 
-export function togglesSelectGroup(group) {
-  return {
-    type: "TOGGLE_SELECT_GROUP",
-    gamers: group.gamers,
-  };
-}
+import * as GroupActions from "../../store/actions/groups";
 
-const Groups = ({ groups, groupActive, dispatch }) => {
+const Groups = ({ groups, groupActive, toggleRank }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Grupos</Text>
@@ -26,9 +21,7 @@ const Groups = ({ groups, groupActive, dispatch }) => {
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item, index }) => (
             <View styles={styles.shildsContainer}>
-              <TouchableOpacity
-                onPress={() => dispatch(togglesSelectGroup(item))}
-              >
+              <TouchableOpacity onPress={() => toggleRank(item)}>
                 <View style={styles.backToShild}>
                   <Image style={styles.shild} source={shild(item.shild)} />
                 </View>
@@ -64,15 +57,12 @@ const Groups = ({ groups, groupActive, dispatch }) => {
   );
 };
 
-// const mapStateToProps = (state) => ({
-//   groups: state.groups.groups,
-//   groupActive: state.groups.groupActive,
-// });
-// const mapDispatchToProps = (dispatch) => ({
-//   toggleRank: (item) => dispatch(groupActive.toggleSelectGroup(item)),
-// });
+const mapStateToProps = (state) => ({
+  groups: state.groups.groups,
+  groupActive: state.groups.groupActive,
+});
+const mapDispatchToProps = (dispatch) => ({
+  toggleRank: (item) => dispatch(GroupActions.togglesSelectGroup(item)),
+});
 
-export default connect((state) => ({
-  groups: state.groups,
-  groupActive: state.groupActive,
-}))(Groups);
+export default connect(mapStateToProps, mapDispatchToProps)(Groups);

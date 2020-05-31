@@ -6,12 +6,12 @@ import styles from "./styles";
 import { connect } from "react-redux";
 
 import IAm from "../../components/IAm";
-
+import Difficulty from "../../components/Difficulty";
 const Groups = () => {
   return (
     <View style={styles.container}>
       <Progress.Bar progress={0.05} width={200} />
-      <IAm />
+      <Difficulty />
     </View>
   );
 };
