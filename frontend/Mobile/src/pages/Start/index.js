@@ -14,19 +14,32 @@ export default function Start() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text>Crie um nickname para começar sua iteração</Text>
+      <View style={styles.containerTop}>
+        <View>
+          <Text>Bem vindx ao Educa+</Text>
+          <Text style={styles.textNick}>
+            Crie um <Text style={styles.textNickName}>nickname</Text> para
+            começar sua iteração
+          </Text>
+        </View>
       </View>
-      <Text>Login</Text>
-      <View>
-        <Text>Nickname</Text>
-        <TextInput placeholder="Digite o seu nickname"></TextInput>
-      </View>
-      <View>
-        <TouchableOpacity onPress={navigateToGame}>
-          <Text>Login</Text>
-          <Feather name="arrow-right" size={40} color="#FFF" />
-        </TouchableOpacity>
+      <View style={styles.backgroundBotton}>
+        <View style={styles.textLoginForm}>
+          <Text style={styles.textLogin}>Como você gosta de ser chamado:</Text>
+          <Text style={styles.textLoginName}>
+            Aquele seu apelido de família, amigos, etc.
+          </Text>
+          <TextInput
+            placeholder="Seu Apelido"
+            style={styles.textLoginUser}
+          ></TextInput>
+          <TouchableOpacity onPress={navigateToGame}>
+            <View style={styles.containerLoginButton}>
+              <Text style={styles.textLoginButton}>Acessar</Text>
+              <Feather name="arrow-right" size={30} color="#FFF" />
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
