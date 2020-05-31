@@ -1,5 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+
+import styles from "./styles";
+
+import trails from "../../configs/trails";
 
 export default function Sections() {
   return (
@@ -7,15 +11,39 @@ export default function Sections() {
       <Text>Cursos</Text>
       <View>
         <View>
-          <View></View>
+          <TouchableOpacity onPress={() => {}}>
+            <View>
+              <Image source={trails("saver", 0)} style={[styles.imageSize]} />
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => {}}>
+            <View>
+              <Image
+                source={trails("investor", 0)}
+                style={[styles.imageSize]}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
         <View>
-          <View></View>
-          <View></View>
-        </View>
-        <View>
-          <View></View>
-          <View></View>
+          <TouchableOpacity onPress={() => {}}>
+            <View>
+              <Image
+                source={trails("policyholder", 0)}
+                style={[styles.imageSize]}
+              />
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => {}}>
+            <View>
+              <Image
+                source={trails("policyholderNoOptios", 0)}
+                style={[styles.imageSize]}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
