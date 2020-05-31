@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 
 import styles from "./styles";
 import shild from "../../configs/shild";
-
+import avatar from "../../assets/avatar1.png";
 import { connect } from "react-redux";
 
 export function togglesSelectGroup(group) {
@@ -44,16 +44,17 @@ const Groups = ({ groups, groupActive, dispatch }) => {
         <Text style={styles.textPoints}>Points</Text>
 
         <FlatList
-          data={groupActive}
+          data={[1, 2, 3, 4, 5, 6]}
+          style={{ height: "60%" }}
           keyExtractor={({ subitem, index }) => toString(index)}
           renderItem={({ subitem, index }) => (
             <View style={styles.gamersContainer}>
-              {console.log(subitem)}
-              <View style={styles.gamer}>
-                <Image style={styles.avatar} />
-                <Text style={styles.textGamer}>{subitem.nickname}</Text>
+              <Text style={styles.position}>{index + 1}</Text>
+              <View style={styles.peopleContainer}>
+                <Image styles={styles.avatar} source={avatar} />
+                <Text styles={styles.nickname}>Nickname</Text>
               </View>
-              <Text style={styles.pointsGamers}></Text>
+              <Text style={styles.pointsGamers}>{600 / (index + 1)}</Text>
             </View>
           )}
         />

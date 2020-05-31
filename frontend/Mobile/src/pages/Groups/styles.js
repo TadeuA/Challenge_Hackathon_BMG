@@ -37,4 +37,26 @@ export default StyleSheet.create({
     height: 80,
     width: 80,
   },
+  textPoints: {
+    alignSelf: "flex-end",
+    marginRight: 10,
+  },
+  gamersContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
+  },
+  peopleContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  position: {
+    fontSize: 25,
+  },
+  nickname: {
+    fontSize: 25,
+  },
+  pointsGamers: {
+    fontSize: 25,
+  },
 });
