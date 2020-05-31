@@ -4,7 +4,20 @@ import { View, Text } from "react-native";
 export default function Sections() {
   return (
     <View>
-      <Text>Hell world</Text>
+      <Text>Cursos</Text>
+      <View>
+        <View>
+          <View></View>
+        </View>
+        <View>
+          <View></View>
+          <View></View>
+        </View>
+        <View>
+          <View></View>
+          <View></View>
+        </View>
+      </View>
     </View>
   );
 }

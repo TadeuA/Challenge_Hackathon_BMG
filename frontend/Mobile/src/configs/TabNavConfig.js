@@ -3,12 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Keyboard } from "react-native";
 
-import {
-  Octicons,
-  AntDesign,
-  EvilIcons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { Octicons, Feather, FontAwesome5 } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -41,14 +36,14 @@ export default function TabNavConfig() {
               IconComponent = Octicons;
               iconName = "person";
             } else if (route.name === "Groups") {
-              IconComponent = MaterialCommunityIcons;
-              iconName = "robot";
+              IconComponent = FontAwesome5;
+              iconName = "crown";
             } else if (route.name === "Sections") {
-              IconComponent = AntDesign;
-              iconName = "CodeSandbox";
+              IconComponent = Feather;
+              iconName = "book-open";
             }
 
-            return <IconComponent name={iconName} size={35} color={color} />;
+            return <IconComponent name={iconName} size={28} color={color} />;
           },
         })}
         tabBarOptions={{
