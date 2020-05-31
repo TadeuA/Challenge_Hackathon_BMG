@@ -10,6 +10,8 @@ import {
 
 import * as ActionsLevel from "../store/actions/level";
 
+import options from "../configs/options";
+
 import { connect } from "react-redux";
 
 const Difficulty = (toggleLevel) => {
@@ -19,23 +21,23 @@ const Difficulty = (toggleLevel) => {
       <Text>Das opções abaixo, qual você sente mais dificuldade?</Text>
       <View>
         <View>
-          <Image />
+          <Image source={options("loan")} />
           <Text>Empréstimo Consignado</Text>
         </View>
         <View>
-          <Image />
+          <Image source={options("cred")} />
           <Text>Crédito Pessoal</Text>
         </View>
         <View>
-          <Image />
+          <Image source={options("card")} />
           <Text>Cartão Consignado</Text>
         </View>
         <View>
-          <Image />
+          <Image source={options("cash")} />
           <Text>Cashback</Text>
         </View>
         <View>
-          <Image />
+          <Image source={options("safe")} />
           <Text>Cofrinho Virtual</Text>
         </View>
       </View>

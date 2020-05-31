@@ -16,37 +16,44 @@ import { connect } from "react-redux";
 const IAm = (toggleLevel) => {
   return (
     <>
-      <Text>Eu sou assim...</Text>
+      <Text style={styles.title}>Eu sou assim...</Text>
       <View style={styles.container}>
         <View>
           <TouchableOpacity
+            style={styles.containerOption}
             onPress={() =>
               toggleLevel("Já tive o crédito negado algumas instituições")
             }
           >
-            <Text>Já tive o crédito negado algumas instituições</Text>
+            <Text style={styles.containerOptionText}>
+              Já tive o crédito negado algumas instituições
+            </Text>
             <AntDesign name="arrowright" size={24} color="black" />
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
+            style={styles.containerOption}
             onPress={() =>
               toggleLevel("Utilizo o crédito e tenho dinheiro em conta")
             }
           >
-            <Text>Utilizo o crédito e tenho dinheiro em conta</Text>
+            <Text style={styles.containerOptionText}>
+              Utilizo o crédito e tenho dinheiro em conta
+            </Text>
             <AntDesign name="arrowright" size={24} color="black" />
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
+            style={styles.containerOption}
             onPress={() =>
               toggleLevel(
                 "Não tenho a cultura de investir e não aplico meu dinheiro com medo de precisar"
               )
             }
           >
-            <Text>
+            <Text style={styles.containerOptionText}>
               Não tenho a cultura de investir e não aplico meu dinheiro com medo
               de precisar
             </Text>
@@ -55,13 +62,14 @@ const IAm = (toggleLevel) => {
         </View>
         <View>
           <TouchableOpacity
+            style={styles.containerOption}
             onPress={() =>
               toggleLevel(
                 "Já tenho o hábito de investir e aplico meu dinheiro na poupança /outros investimentos"
               )
             }
           >
-            <Text>
+            <Text style={styles.containerOptionText}>
               Já tenho o hábito de investir e aplico meu dinheiro na poupança /
               outros investimentos
             </Text>
@@ -81,5 +89,31 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(IAm);
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flexDirection: "column",
+    height: "80%",
+    marginHorizontal: 10,
+    borderWidth: 3,
+    borderColor: "#C4C4C4",
+    justifyContent: "space-between",
+  },
+  title: {
+    paddingHorizontal: 10,
+    color: "#F58220",
+    fontSize: 25,
+    paddingBottom: 15,
+  },
+  containerOption: {
+    padding: 34.5,
+    borderWidth: 3,
+    borderColor: "#C4C4C4",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  containerOptionText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
 });
