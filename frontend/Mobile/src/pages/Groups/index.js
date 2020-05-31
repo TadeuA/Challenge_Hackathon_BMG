@@ -49,10 +49,12 @@ const Groups = ({ groups, groupActive, dispatch }) => {
           keyExtractor={({ subitem, index }) => toString(index)}
           renderItem={({ subitem, index }) => (
             <View style={styles.gamersContainer}>
-              <Text style={styles.position}>{index + 1}</Text>
-              <View style={styles.peopleContainer}>
-                <Image styles={styles.avatar} source={avatar} />
-                <Text styles={styles.nickname}>Nickname</Text>
+              <View style={styles.gamersContainerPeople}>
+                <Text style={styles.position}>{index + 1}</Text>
+                <View style={styles.peopleContainer}>
+                  <Image styles={styles.avatar} source={avatar} />
+                </View>
+                <Text styles={styles.nickName}>Nickname</Text>
               </View>
               <Text style={styles.pointsGamers}>{600 / (index + 1)}</Text>
             </View>
@@ -63,13 +65,13 @@ const Groups = ({ groups, groupActive, dispatch }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  groups: state.groups.groups,
-  groupActive: state.groups.groupActive,
-});
-const mapDispatchToProps = (dispatch) => ({
-  toggleRank: (item) => dispatch(groupActive.toggleSelectGroup(item)),
-});
+// const mapStateToProps = (state) => ({
+//   groups: state.groups.groups,
+//   groupActive: state.groups.groupActive,
+// });
+// const mapDispatchToProps = (dispatch) => ({
+//   toggleRank: (item) => dispatch(groupActive.toggleSelectGroup(item)),
+// });
 
 export default connect((state) => ({
   groups: state.groups,

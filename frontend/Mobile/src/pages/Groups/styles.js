@@ -14,6 +14,9 @@ export default StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "#F58220",
+    paddingBottom: 10,
   },
   textGroupsContainer: {
     fontSize: 18,
@@ -40,23 +43,33 @@ export default StyleSheet.create({
   textPoints: {
     alignSelf: "flex-end",
     marginRight: 10,
+    fontSize: 22,
   },
   gamersContainer: {
+    margin: 5,
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 10,
+    alignItems: "center",
+  },
+  gamersContainerPeople: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   peopleContainer: {
     flexDirection: "row",
     alignItems: "center",
+    paddingRight: 10,
   },
   position: {
     fontSize: 25,
-  },
-  nickname: {
-    fontSize: 25,
+    paddingRight: 5,
   },
   pointsGamers: {
     fontSize: 25,
+  },
+  avatar: {
+    paddingHorizontal: 10,
   },
 });

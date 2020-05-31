@@ -1,32 +1,43 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 
-import costumerProfile from "../../assets/costumerProfile.png";
+import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
-export default function Profile() {
+export default function Start() {
+  const navigation = useNavigation();
+
+  function navigateToGame() {
+    navigation.navigate("inSide");
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Perfil</Text>
-      <View style={styles.profileContainer}>
-        <TouchableOpacity onPress={() => {}}>
-          <View>
-            <Image source={costumerProfile} />
-          </View>
-        </TouchableOpacity>
-        <Text>Sabrina Vasconcelos</Text>
+      <View style={styles.containerTop}>
         <View>
-          <TouchableOpacity onPress={() => {}}>
-            <Text>Coquistas</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => {}}>
-            <Text>Amigos</Text>
+          <Text style={styles.textWelcome}>Bem vindx ao Educa+</Text>
+          <Text style={styles.textNick}>
+            Aqui você aprende e acumula pontos, e troca por recompensas.
+          </Text>
+        </View>
+      </View>
+      <View style={styles.backgroundBotton}>
+        <View style={styles.textLoginForm}>
+          <Text style={styles.textLogin}>Como você gosta de ser chamado:</Text>
+          <Text style={styles.textLoginName}>
+            Aquele seu apelido de família, amigos, etc.
+          </Text>
+          <TextInput
+            placeholder="Seu Apelido"
+            style={styles.textLoginUser}
+          ></TextInput>
+          <TouchableOpacity onPress={navigateToGame}>
+            <View style={styles.containerLoginButton}>
+              <Text style={styles.textLoginButton}>Acessar</Text>
+            </View>
           </TouchableOpacity>
         </View>
-        <View></View>
-
-        <View style={styles.menuContainer}></View>
       </View>
     </View>
   );
