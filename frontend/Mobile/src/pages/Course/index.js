@@ -12,7 +12,7 @@ const Course = () => {
   const navigation = useNavigation();
 
   function navigateCred() {
-    navigation.navigate("Cred");
+    navigation.navigate("Creds");
   }
   return (
     <View style={styles.container}>

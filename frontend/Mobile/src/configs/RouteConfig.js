@@ -12,6 +12,7 @@ import TabNavConfig from "./TabNavConfig";
 import Modules from "../pages/Modules";
 
 import Course from "../pages/Course";
+import Creds from "../pages/Creds";
 
 const AppStack = createStackNavigator();
 
@@ -25,6 +26,7 @@ export default function Routes() {
       <AppStack.Screen name="Knowledge" component={Knowledge} />
       <AppStack.Screen name="Modules" component={Modules} />
       <AppStack.Screen name="Course" component={Course} />
+      <AppStack.Screen name="Creds" component={Creds} />
 
       <AppStack.Screen name="inSide" component={TabNavConfig} />
     </AppStack.Navigator>
