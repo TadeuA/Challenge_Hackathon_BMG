@@ -8,6 +8,8 @@ import { connect } from "react-redux";
 
 import IAm from "../../components/IAm";
 import Difficulty from "../../components/Difficulty";
+import Nivel from "../../components/Nivel";
+
 const Groups = () => {
   return (
     <View style={styles.container}>
@@ -23,7 +25,7 @@ const Groups = () => {
         backgroundColor={"#C6C6C6"}
         color={"#F58220"}
       />
-      <Difficulty />
+      <Nivel />
     </View>
   );
 };
