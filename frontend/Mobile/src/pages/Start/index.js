@@ -9,7 +9,7 @@ export default function Start() {
   const navigation = useNavigation();
 
   function navigateToGame() {
-    navigation.navigate("Level");
+    navigation.navigate("IAm");
   }
 
   return (
