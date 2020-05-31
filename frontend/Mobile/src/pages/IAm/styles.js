@@ -7,9 +7,11 @@ export default StyleSheet.create({
     height: "100%",
   },
   containerProgress: {
-    width: "100%",
     alignItems: "center",
     marginBottom: 30,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 20,
   },
   containerIn: {
     flexDirection: "column",

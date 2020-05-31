@@ -15,18 +15,20 @@ const Knowledge = () => {
   }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => {}}>
-        <AntDesign name="arrowleft" size={24} color="black" />
-      </TouchableOpacity>
+      <View style={styles.containerProgress}>
+        <TouchableOpacity onPress={() => {}}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
 
-      <Progress.Bar
-        progress={0.4}
-        width={300}
-        height={25}
-        borderRadius={30}
-        backgroundColor={"#C6C6C6"}
-        color={"#F58220"}
-      />
+        <Progress.Bar
+          progress={0.66}
+          width={300}
+          height={25}
+          borderRadius={30}
+          backgroundColor={"#C6C6C6"}
+          color={"#F58220"}
+        />
+      </View>
       <Text style={styles.tittle}>Agora me conta uma coisa</Text>
       <Text style={styles.tittle}>
         Das opções abaixo, qual você sente mais dificuldade?

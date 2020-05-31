@@ -35,10 +35,12 @@ const Groups = ({ groups, groupActive, toggleRank }) => {
         <Text style={styles.textPoints}>Points</Text>
 
         <FlatList
-          data={console.log(groupActive.gamers)}
+          data={[1, 2, 3, 4, 5, 6]}
           style={{ height: "60%" }}
           keyExtractor={({ item, index }) => toString(index)}
-          ListEmptyComponent={<Text>Selecione um Grupo</Text>}
+          ListEmptyComponent={
+            <Text style={styles.gamerSelectGroup}>Selecione um Grupo</Text>
+          }
           renderItem={({ item, index }) => (
             <View style={styles.gamersContainer}>
               <View style={styles.gamersContainerPeople}>
@@ -46,7 +48,7 @@ const Groups = ({ groups, groupActive, toggleRank }) => {
                 <View style={styles.peopleContainer}>
                   <Image styles={styles.avatar} source={avatar} />
                 </View>
-                <Text styles={styles.nickName}></Text>
+                <Text styles={styles.nickName}>nickName</Text>
               </View>
               <Text style={styles.pointsGamers}>{600 / (index + 1)}</Text>
             </View>

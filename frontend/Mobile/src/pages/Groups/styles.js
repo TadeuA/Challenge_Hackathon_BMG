@@ -10,6 +10,9 @@ export default StyleSheet.create({
     color: "#F58220",
     fontSize: 25,
   },
+  gamerSelectGroup: {
+    fontSize: 18,
+  },
   groupsContainer: {
     flexDirection: "column",
     justifyContent: "center",

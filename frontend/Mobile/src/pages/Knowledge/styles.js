@@ -7,9 +7,11 @@ export default StyleSheet.create({
     height: "100%",
   },
   containerProgress: {
-    width: "100%",
     alignItems: "center",
-    marginBottom: 30,
+    marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 20,
   },
   tittle: {
     color: "#F58220",
@@ -17,7 +19,7 @@ export default StyleSheet.create({
     padding: 5,
   },
   selectOption: {
-    margin: 15,
+    margin: 10,
     padding: 10,
     borderRadius: 20,
     flexDirection: "row",

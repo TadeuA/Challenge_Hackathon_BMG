@@ -15,12 +15,19 @@ const Maps = () => {
   }
   return (
     <View style={styles.container}>
-      <Text>Seu perfil de investidor e:</Text>
-      <Text>xxxxxxxx</Text>
-      <Image source={DUDA} />
-      <TouchableOpacity onPress={navigateToGame}>
-        <Text>Clique para Continuar</Text>
-      </TouchableOpacity>
+      <View style={styles.containerBody}>
+        <View style={styles.containerText}>
+          <Text style={styles.containerTextP}>Seu perfil de investidor e:</Text>
+          <Text style={styles.containerTextP}>xxxxxxxx</Text>
+        </View>
+        <Image source={DUDA} />
+        <TouchableOpacity
+          onPress={navigateToGame}
+          style={styles.containerButton}
+        >
+          <Text style={styles.containerButtonText}>Clique para Continuar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

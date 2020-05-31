@@ -16,18 +16,20 @@ const Nivel = () => {
   }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => {}}>
-        <AntDesign name="arrowleft" size={24} color="black" />
-      </TouchableOpacity>
+      <View style={styles.containerProgress}>
+        <TouchableOpacity onPress={() => {}}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
 
-      <Progress.Bar
-        progress={0.4}
-        width={300}
-        height={25}
-        borderRadius={30}
-        backgroundColor={"#C6C6C6"}
-        color={"#F58220"}
-      />
+        <Progress.Bar
+          progress={1}
+          width={300}
+          height={25}
+          borderRadius={30}
+          backgroundColor={"#C6C6C6"}
+          color={"#F58220"}
+        />
+      </View>
       <Text style={styles.tittle}>Maravilha!</Text>
       <Text style={styles.tittle}>DAgora, escolha uma opção</Text>
 
