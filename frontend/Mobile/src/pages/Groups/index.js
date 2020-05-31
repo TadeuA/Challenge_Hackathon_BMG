@@ -6,10 +6,10 @@ import shild from "../../configs/shild";
 import avatar from "../../assets/avatar1.png";
 import { connect } from "react-redux";
 
-export function togglesSelectGroup(gamers) {
+export function togglesSelectGroup(group) {
   return {
     type: "TOGGLE_SELECT_GROUP",
-    gamers,
+    gamers: group.gamers,
   };
 }
 
@@ -27,7 +27,7 @@ const Groups = ({ groups, groupActive, dispatch }) => {
           renderItem={({ item, index }) => (
             <View styles={styles.shildsContainer}>
               <TouchableOpacity
-                onPress={() => dispatch(togglesSelectGroup(item.gamers))}
+                onPress={() => dispatch(togglesSelectGroup(item))}
               >
                 <View style={styles.backToShild}>
                   <Image style={styles.shild} source={shild(item.shild)} />
@@ -42,7 +42,7 @@ const Groups = ({ groups, groupActive, dispatch }) => {
         <Text style={styles.textPoints}>Points</Text>
 
         <FlatList
-          data={groupActive.gamers.gamers}
+          data={console.log(groupActive.gamers)}
           style={{ height: "60%" }}
           keyExtractor={({ item, index }) => toString(index)}
           ListEmptyComponent={<Text>Selecione um Grupo</Text>}

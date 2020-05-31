@@ -3,36 +3,61 @@ import Constants from "expo-constants";
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: "#DAE1E7",
+    backgroundColor: "#F1E3CB",
     height: "100%",
-    paddingTop: Constants.statusBarHeight - 10,
+    paddingHorizontal: 5,
   },
   profileContainer: {
     alignItems: "center",
     paddingTop: 30,
+    marginBottom: 10,
   },
   title: {
     marginLeft: 20,
-    color: "#00909E",
-    fontSize: 25,
+    color: "#F58220",
+    fontSize: 22,
+  },
+  profileImage: {
+    borderWidth: 4,
+    borderColor: "#F58220",
+    borderRadius: 100,
   },
   imgProfile: {
     height: 140,
     width: 140,
     borderRadius: 100,
   },
+  nameProfile: {
+    fontSize: 25,
+    fontWeight: "bold",
+  },
+
   userName: {
     marginVertical: 10,
     fontSize: 25,
     color: "#00909E",
     fontWeight: "bold",
   },
+  menuProfile: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 20,
+    paddingBottom: 10,
+  },
+
+  menuProfileTitle: {
+    color: "#F58220",
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+
   menuContainer: {
     backgroundColor: "#C4C4C4",
     width: "90%",
     paddingHorizontal: 20,
     paddingVertical: 20,
     borderRadius: 15,
+    alignItems: "center",
   },
   menuItem: {
     marginVertical: 5,

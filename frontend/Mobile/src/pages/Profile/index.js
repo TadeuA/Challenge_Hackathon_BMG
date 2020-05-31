@@ -13,19 +13,22 @@ export default function Profile() {
         <TouchableOpacity onPress={() => {}}></TouchableOpacity>
         <View></View>
         <TouchableOpacity onPress={() => {}}>
-          <View>
+          <View style={styles.profileImage}>
             <Image source={costumerProfile} />
           </View>
         </TouchableOpacity>
-        <Text>Sabrina Vasconcelos</Text>
-        <View>
+        <Text style={styles.nameProfile}>Sabrina Vasconcelos</Text>
+      </View>
+      <View>
+        <View style={styles.menuProfile}>
           <TouchableOpacity onPress={() => {}}>
-            <Text>Coquistas</Text>
+            <Text style={styles.menuProfileTitle}>Coquistas</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => {}}>
-            <Text>Amigos</Text>
+            <Text style={styles.menuProfileTitle}>Amigos</Text>
           </TouchableOpacity>
         </View>
+
         <View></View>
 
         <View style={styles.menuContainer}></View>
