@@ -33,33 +33,36 @@ export default function Profile() {
         <View>
           <FlatList
             data={[1, 2, 3, 4, 5, 6]}
-            style={{ height: "50%" }}
+            style={{ height: "65%" }}
             keyExtractor={({ item, index }) => toString(index)}
             renderItem={({ item, index }) => (
-              <View style={styles.achievements}>
-                <View style={styles.thambnail}>
-                  <Image />
-                  <Text style={styles.thambnailText}>Nivel 2</Text>
-                </View>
-                <View style={styles.containerProgress}>
-                  <Text style={styles.question}>Novo(a)Nesse Assunto?</Text>
-                  <Text>Comece aqui pello básico</Text>
-
-                  <Progress.Bar
-                    progress={2 / index}
-                    width={200}
-                    height={15}
-                    borderRadius={30}
-                    backgroundColor={"#C6C6C6"}
-                    color={"#F58220"}
-                  />
+              <View style={styles.profileConquest}>
+                <View style={styles.profileLevel}>
+                  <View style={styles.profileLevelImg}>
+                    <Image />
+                    <Text>Nivel 2</Text>
+                  </View>
+                  <View style={styles.profileLevelDescription}>
+                    <Text style={styles.profileLevelTittle}>
+                      Novo(a)Nesse Assunto?
+                    </Text>
+                    <Text style={styles.profileLevelText}>
+                      Comece aqui pelo básico
+                    </Text>
+                    <Progress.Bar
+                      progress={2 / index}
+                      width={250}
+                      height={25}
+                      borderRadius={30}
+                      backgroundColor={"#C6C6C6"}
+                      color={"#F58220"}
+                    />
+                  </View>
                 </View>
               </View>
             )}
           />
         </View>
-
-        <View style={styles.menuContainer}></View>
       </View>
     </View>
   );

@@ -16,53 +16,64 @@ const Course = () => {
   }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => {}}>
-        <AntDesign name="arrowleft" size={24} color="black" />
-      </TouchableOpacity>
-      <Progress.Bar
-        progress={0.66}
-        width={300}
-        height={25}
-        borderRadius={30}
-        backgroundColor={"#C6C6C6"}
-        color={"#F58220"}
-      />
-      <View>
-        <Image source={seeds} />
-        <Text>Vamos começar!</Text>
-        <Text>Qual é a o melhor momento para solicitar crédito pessoal?</Text>
-        <View>
-          <View>
-            <Text>Para pagar uma divida</Text>
-          </View>
-        </View>
-        <View>
-          <View>
-            <Text>Cobrir custos de uma viagem</Text>
-          </View>
+      <View style={styles.containerProgress}>
+        <TouchableOpacity onPress={() => {}}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <Progress.Bar
+          progress={0.66}
+          width={300}
+          height={25}
+          borderRadius={30}
+          backgroundColor={"#C6C6C6"}
+          color={"#F58220"}
+        />
+      </View>
+      <View style={styles.courseLession}>
+        <View style={styles.courseTittle}>
+          <Image source={seeds} />
+          <Text style={styles.courseTittleLesson}>Vamos começar!</Text>
+          <Text style={styles.courseDescreption}>
+            Qual é a o melhor momento para solicitar crédito pessoal?
+          </Text>
         </View>
 
-        <View>
-          <View>
-            <Text>Melhorar seu negócio e/ou para conseguir uma promoção</Text>
+        <View style={styles.courseOption}>
+          <View style={styles.courseOptionSelect}>
+            <Text style={styles.courseOptionText}>Para pagar uma divida</Text>
           </View>
-        </View>
 
-        <View>
-          <View>
-            <Text>Para melhorar a estética</Text>
+          <View style={styles.courseOptionSelect}>
+            <Text style={styles.courseOptionText}>
+              Cobrir custos de uma viagem
+            </Text>
           </View>
         </View>
-        <TouchableOpacity onPress={navigateCred}>
-          <Text>VEREFICAR</Text>
+        <View style={styles.courseOption}>
+          <View style={styles.courseOptionSelect}>
+            <Text style={styles.courseOptionText}>
+              Melhorar seu negócio e/ou para conseguir uma promoção
+            </Text>
+          </View>
+
+          <View style={styles.courseOptionSelect}>
+            <Text style={styles.courseOptionText}>
+              Para melhorar a estética
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity onPress={navigateCred} style={styles.courseButton}>
+          <Text style={styles.courseButtonText}>CONTINUAR</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={() => {}}>
-        <AntDesign name="stepbackward" size={24} color="black" />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {}}>
-        <AntDesign name="stepforward" size={24} color="black" />
-      </TouchableOpacity>
+      <View style={styles.courseArrow}>
+        <TouchableOpacity onPress={() => {}}>
+          <AntDesign name="stepbackward" size={24} color="#C4C4C4" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {}}>
+          <AntDesign name="stepforward" size={24} color="#C4C4C4" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

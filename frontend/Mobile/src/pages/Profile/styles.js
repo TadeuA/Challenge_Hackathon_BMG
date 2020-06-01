@@ -70,28 +70,36 @@ export default StyleSheet.create({
     color: "#DD0612",
     fontSize: 16,
   },
-  achievements: {
+  profileLevelImg: {
+    backgroundColor: "#C4C4C4",
+    height: 91,
+    width: 91,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  profileConquest: {
+    padding: 5,
+  },
+  profileLevel: {
+    padding: 5,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 10,
-    marginBottom: 10,
+    alignItems: "flex-end",
   },
-  thambnail: {
-    backgroundColor: "#C4C4C4",
-    width: 91,
-    height: 91,
-    borderRadius: 25,
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingBottom: 2,
+  profileLevelDescription: {
+    flexDirection: "column",
+    padding: 5,
   },
-  containerProgress: {
-    paddingVertical: 10,
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  question: {
+  profileLevelTittle: {
+    color: "#525252",
+    fontSize: 17,
     fontWeight: "bold",
-    fontSize: 16,
+    paddingBottom: 10,
+  },
+  profileLevelText: {
+    color: "#525252",
+    fontSize: 12,
+    paddingBottom: 10,
   },
 });
