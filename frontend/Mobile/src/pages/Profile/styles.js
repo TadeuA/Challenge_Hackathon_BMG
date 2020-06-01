@@ -70,4 +70,28 @@ export default StyleSheet.create({
     color: "#DD0612",
     fontSize: 16,
   },
+  achievements: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
+  thambnail: {
+    backgroundColor: "#C4C4C4",
+    width: 91,
+    height: 91,
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingBottom: 2,
+  },
+  containerProgress: {
+    paddingVertical: 10,
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  question: {
+    fontWeight: "bold",
+    fontSize: 16,
+  },
 });

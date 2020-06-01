@@ -36,23 +36,24 @@ export default function Profile() {
             style={{ height: "50%" }}
             keyExtractor={({ item, index }) => toString(index)}
             renderItem={({ item, index }) => (
-              <View>
-                <View>
+              <View style={styles.achievements}>
+                <View style={styles.thambnail}>
                   <Image />
-                  <Text>Nivel 2</Text>
+                  <Text style={styles.thambnailText}>Nivel 2</Text>
                 </View>
-                <View>
-                  <Text>Novo(a)Nesse Assunto?</Text>
+                <View style={styles.containerProgress}>
+                  <Text style={styles.question}>Novo(a)Nesse Assunto?</Text>
                   <Text>Comece aqui pello básico</Text>
+
+                  <Progress.Bar
+                    progress={2 / index}
+                    width={200}
+                    height={15}
+                    borderRadius={30}
+                    backgroundColor={"#C6C6C6"}
+                    color={"#F58220"}
+                  />
                 </View>
-                <Progress.Bar
-                  progress={2 / index}
-                  width={300}
-                  height={25}
-                  borderRadius={30}
-                  backgroundColor={"#C6C6C6"}
-                  color={"#F58220"}
-                />
               </View>
             )}
           />

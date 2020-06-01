@@ -17,28 +17,28 @@ const Modules = () => {
     <View style={styles.container}>
       <View>
         <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 0)} />
+          <Image source={trails("saver", 0)} style={styles.modules} />
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 1)} />
+          <Image source={trails("saver", 1)} style={styles.modules} />
         </TouchableOpacity>
         <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 2)} />
-        </TouchableOpacity>
-      </View>
-      <View>
-        <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 3)} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 4)} />
+          <Image source={trails("saver", 2)} style={styles.modules} />
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity onPress={navigateToLession}>
-          <Image source={trails("saver", 5)} />
+          <Image source={trails("saver", 3)} style={styles.modules} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={navigateToLession}>
+          <Image source={trails("saver", 4)} style={styles.modules} />
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity onPress={navigateToLession}>
+          <Image source={trails("saver", 5)} style={styles.modules} />
         </TouchableOpacity>
       </View>
     </View>

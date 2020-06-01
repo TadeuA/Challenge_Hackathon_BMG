@@ -10,7 +10,7 @@ export default function Sections() {
   const navigation = useNavigation();
 
   function navigateToCourse() {
-    navigation.navigate("Modules");
+    navigation.navigate("Course");
   }
   return (
     <View style={styles.container}>
